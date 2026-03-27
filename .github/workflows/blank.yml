@@ -18,5 +18,8 @@ jobs:
           node-version: 18
       - name: install dependencies
         run: npm install
+      - name: Debug npm logs
+        if: failure()
+        run: cat /home/runner/.npm/_logs/*.log  
       - name: run tests
         run: npm test
