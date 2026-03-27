@@ -9,4 +9,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: print system info
-        run: sh uname -a
+        run: sh 'uname -a'
